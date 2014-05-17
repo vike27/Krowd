@@ -1,7 +1,150 @@
-<div class="center hero-unit">
-  <h1>Welcome to the Krowprize</h1>
 
-  <h2>
-    This is the home page for Krowdprize
-  </h2>
+<!-- Banner -->
 
+<div class="banner">
+  <div class="banner-content">
+
+		<div class='logo-image'>
+		<%= image_tag("logo.png", alt: "logo-image", class:'img-responsive logo') %>
+		</div>
+
+		<div class='opening-text'>
+			<span class="opening-text-name">Krowdprize</span> The Platform For World-changing Crowdfunded Contests
+		</div>
+		<div class="sub-opening-text"> 
+			Incentivizing human progress one contest at a time 
+		</div>
+
+
+  </div>
+</div>
+
+<!-- Features -->
+
+<div class="big-container">
+
+<div class="container">
+
+
+
+  <div class="mid-text-container">
+    <h1>We create kick-ass contests</h1>
+      <p>Competition is the best way to incentivize progress</p>
+  </div>
+
+
+
+
+<div class="row index-row">
+
+    <div class="col-sm-4">
+        <div class="media">
+            <div class="row ">
+                <div class="media-img  pull-left  col-sm-5  col-md-4 ">
+                    <div class="img-overlay "> 
+                        <a class="btn  btn-primary  animated fadeInUp needsclick" href="/en/about/" rel="bookmark">Open</a> 
+                    </div>
+
+                    <%= image_tag('computer.jpg', class: 'pull-left media-img', alt: 'About') %>
+                </div>
+
+                <div class="media-body   col-sm-7 col-md-8  ">
+                    <h4 class="media-heading"> <%= link_to 'Crowdsourcing', root_path, class: 'media-heading' %></h4>
+                    <p class="hidden-sm">Submt your best contest ideas each month</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-4">
+        <div class="media">
+            <div class="row ">
+                <div class="media-img pull-left   col-sm-5 col-md-4 ">
+                    <div class="img-overlay  "> 
+                        <a class="btn  btn-primary  animated fadeInUp needsclick" href="/en/portfolio/" rel="bookmark">Open</a> 
+                    </div>
+
+                    <%= image_tag('notebook.jpg', class: 'media-img', alt: 'Portfolio') %>
+                </div>
+                <div class="media-body   col-sm-7  col-md-8 ">
+                    <h4 class="media-heading"> <%= link_to 'Selection & Fundraising', root_path, class: 'media-heading' %></h4>
+                    <p class="hidden-sm">We select the best one each month crowdfund a prize</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-4">
+        <div class="media">
+            <div class="row ">
+                <div class="media-img  pull-left   col-sm-5 col-md-4 ">
+                    <div class="img-overlay "> 
+                        <a class="btn  btn-primary  animated fadeInUp needsclick" href="/en/contacts/" rel="bookmark">Open</a> 
+                    </div>
+
+                    <%= image_tag('building.jpg', class: 'media-img', alt: 'Contacts', type: 'button') %>                                        
+                </div>
+
+                <div class="media-body  col-sm-7 col-md-8 ">
+                    <h4 class="media-heading"><%= link_to 'Compete & Win', root_path, class: 'media-heading' %></h4>
+                    <p class="hidden-sm">Compete for the prize and awesome perks</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div> 
+
+</div>
+
+
+</div>
+
+<!-- imagebreak -->
+
+<div class="image-break">
+</div>
+
+<!-- signup form -->
+
+<div class="subscription-section">
+
+    <div class="subscription-container">
+
+        <div class="row">
+
+            <div class="newsletter-form-img col-xs-12 col-sm-4 col-md-4 col-lg-6">
+                <img class="img-responsive" src="assets/img/email.png" alt="">
+            </div>
+
+
+            <div class="newsletter-form-content col-xs-12 col-sm-8 col-md-8 col-lg-6">
+                <h2>Sign Up For Free</h2>
+                <h4>Get early access to the revolutionary platform</h4>
+            </div>
+
+            <div class="form-subscribe">
+                <%= form_for @subscription do |f| %>
+
+                    <div class="form-inputs">
+                        <%= f.label :first_name %></br>
+                        <%= f.text_field :fname, placeholder:"First Name" %>
+                        <%= f.label :last_name %><br />
+                        <%= f.text_field :lname, placeholder:"Last Name" %>
+                        <%= f.label :email %><br />
+                        <%= f.email_field :email, placeholder:"Email" %>
+                    </div>
+                    <div class="form-actions">
+                      <%= f.button :submit %>
+                    </div>
+
+                <% end %>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>

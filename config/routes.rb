@@ -7,6 +7,8 @@ Krowd::Application.routes.draw do
    match '/about', to: 'staticpages#about', via: 'get'
    match '/contact', to: 'staticpages#contact', via: 'get'
 
+   resources :subscriptions
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
