@@ -1,0 +1,2 @@
+class PremailsController < ApplicationController
+end
